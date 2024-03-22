@@ -54,7 +54,7 @@ class App extends Component {
     return (
       <div className="App">
         <img className='logotipo' src='/pensador.svg' />
-        <h1>Web Dialogs</h1>
+        <h1>Discussão sobre a natureza humana</h1>
         {this.state.comentarios.map((comentario, indice) => (
           <Comentario
             key={indice}

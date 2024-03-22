@@ -1,5 +1,5 @@
 .Comentario {
-    background-color: #fff;
+    background-color: #e8e5f6;
     margin-bottom: 2rem;
     border-radius: .5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
@@ -26,11 +26,11 @@
 .Comentario .conteudo .nome {
     font-size: 1.25rem;
     margin: .5rem 0 .25rem 0;
-    color: #2d3748
+    color: #284370
 }
 
 .Comentario .conteudo .email {
-    color: #007bff;
+    color: #c149d8;
 }
 
 .Comentario .conteudo .mensagem {
@@ -40,7 +40,7 @@
 
 .Comentario .conteudo .data {
     text-align: right;
-    color: #718096;
+    color: #ac41cd;
     font-size: .75rem;
 }
 
