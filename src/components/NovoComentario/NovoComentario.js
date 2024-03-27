@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
+import './NovoComentario.css';
 
 
-import Comentario from './components/Comentario/Comentario'
+import Comentario from '../Comentario/Comentario'
 
 
-
-class App extends Component {
+class NovoComentario extends Component {
 
   state = {
     comentarios: [
@@ -101,4 +100,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default NovoComentario;

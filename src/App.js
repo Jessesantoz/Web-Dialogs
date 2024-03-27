@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 
-//import NovoComentario from "./components/NovoComentario/NovoComentario"
-//import Comentario from "./components/Comentario/Comentario"
+import NovoComentario from "./components/NovoComentario/NovoComentario"
+import Dialogo from "./components/Dialogo/Dialogo"
 import Apresentacao from "./components/Apresentacao/Apresentacao"
-
+import Perfil from "./components/Perfil/Perfil"
 
 function App() {
   return (
@@ -15,13 +15,16 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to='/Apresentacao'>Início</Link>
+                <Link to='/Apresentacao'>Home</Link>
               </li>
               <li>
-                <Link to='/'>Novo Diálogo</Link>
+                <Link to='/Dialogo'>Diálogos</Link>
               </li>
               <li>
-                <Link to='/'>Diálogos</Link>
+                <Link to='/NovoComentario'>Novo Diálogo</Link>
+              </li>
+              <li>
+                <Link to='/Perfil'>Perfil</Link>
               </li>
             </ul>
           </nav>
@@ -31,12 +34,31 @@ function App() {
             <Route path="/Apresentacao">
               <Apresentacao/>
             </Route>
+            <Route path="/Dialogo">
+              <Dialogo/>
+            </Route>
+            <Route path="/NovoComentario">
+              <NovoComentario/>
+            </Route>
+            <Route path="/Perfil">
+              <Perfil/>
+            </Route>
+            <Route path="*">
+              <PagNaoEncontrada/>
+            </Route>
           </Switch>
         </main>
       </div>
     </Router>
+    )
+  }
 
-  )
-}
+    function PagNaoEncontrada() {
+      return <> 
+      <h1>404</h1>
+      <p>Página não encontrada</p>
+      </>
+    }
+
 
 export default App;
