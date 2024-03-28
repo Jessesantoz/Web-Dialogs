@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Switch, Route } from 'react-router-dom';
 
 import NovoComentario from "./components/NovoComentario/NovoComentario"
 import Dialogo from "./components/Dialogo/Dialogo"
@@ -15,16 +15,16 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to='/Apresentacao'>Home</Link>
+                <NavLink to='/Apresentacao'>Home</NavLink>
               </li>
               <li>
-                <Link to='/Dialogo'>Diálogos</Link>
+                <NavLink to='/Dialogo'>Diálogos</NavLink>
               </li>
               <li>
-                <Link to='/NovoComentario'>Novo Diálogo</Link>
+                <NavLink to='/NovoComentario'>Novo Diálogo</NavLink>
               </li>
               <li>
-                <Link to='/Perfil'>Perfil</Link>
+                <NavLink to='/Perfil'>Perfil</NavLink>
               </li>
             </ul>
           </nav>
