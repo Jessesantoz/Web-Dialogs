@@ -10,16 +10,10 @@ class NovoComentario extends Component {
   state = {
     comentarios: [
       {
-        nome: 'João',
-        email: 'joao@mail.com',
-        data: new Date(2020, 3, 19, 17, 30, 0),
-        mensagem: 'Olá, tudo bem?'
-      },
-      {
-        nome: 'Pedro',
-        email: 'pedro@mail.com',
+        nome: 'Maquina',
+        email: 'WebDialogs@mail.com',
         data: new Date(2020, 3, 22, 12, 15, 0),
-        mensagem: 'Olá, tudo bem sim....'
+        mensagem: 'Inicie um novo diálogo....'
       }
     ],
     novoComentario: {
@@ -52,8 +46,7 @@ class NovoComentario extends Component {
   render() {
     return (
       <div className="App">
-        <img className='logotipo' src='/pensador.svg' />
-        <h1>Discussão sobre a natureza humana</h1>
+        <h1>Novo Diálogo:</h1>
         {this.state.comentarios.map((comentario, indice) => (
           <Comentario
             key={indice}

@@ -7,16 +7,17 @@ import Comentario from '../Comentario/Comentario'
 
 class Dialogo extends Component {
 
+
   state = {
     comentarios: [
       {
-        nome: 'Platão',
+        nome: 'João',
         email: 'joao@mail.com',
         data: new Date(2020, 3, 19, 17, 30, 0),
         mensagem: 'Olá, tudo bem?'
       },
       {
-        nome: 'Aristótelis',
+        nome: 'Pedro',
         email: 'pedro@mail.com',
         data: new Date(2020, 3, 22, 12, 15, 0),
         mensagem: 'Olá, tudo bem sim....'
@@ -27,6 +28,26 @@ class Dialogo extends Component {
       email: '',
       mensagem: ''
     }
+  }
+
+  adicionarComentario = evento => {
+    evento.preventDefault();
+    const novoComentario = { ...this.state.novoComentario, data: new Date() }
+    this.setState({
+      comentarios: [...this.state.comentarios, novoComentario],
+      novoComentario: { nome: '', email: '', mensagem: '' }
+    })
+  }
+
+  removerComentario = comentario => {
+    let lista = this.state.comentarios;
+    lista = lista.filter(c => c !== comentario)
+    this.setState({ comentarios: lista })
+  }
+
+  digitacao = evento => {
+    const { name, value } = evento.target;
+    this.setState({ novoComentario: { ...this.state.novoComentario, [name]: value } })
   }
 
   render() {
@@ -45,6 +66,36 @@ class Dialogo extends Component {
           </Comentario>
         ))}
 
+        <form method="post" onSubmit={this.adicionarComentario} className="Novo-Comentario">
+          <h2>Adicionar Comentário</h2>
+          <div>
+            <input
+              type="text"
+              name="nome"
+              value={this.state.novoComentario.nome}
+              onChange={this.digitacao}
+              required
+              placeholder="Digite seu nome" />
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              value={this.state.novoComentario.email}
+              onChange={this.digitacao}
+              required
+              placeholder="Digite seu email" />
+          </div>
+          <div>
+            <textarea
+              name="mensagem"
+              value={this.state.novoComentario.mensagem}
+              onChange={this.digitacao}
+              required
+              rows="4" />
+          </div>
+          <button type="submit">Adicionar Comentário</button>
+        </form>
       </div>
     );
   }
