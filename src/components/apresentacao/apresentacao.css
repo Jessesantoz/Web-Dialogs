@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+    margin-top: 100px;
+  }
+
+  .App h3 {
+    text-align: center;
+    color: rgb(205, 170, 233);
+    margin-bottom: 50px;
+    margin-top: 100px;
+  }
+
+  .App p {
+    text-align: center;
+  }
