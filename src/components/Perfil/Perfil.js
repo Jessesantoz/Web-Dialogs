@@ -1,14 +1,19 @@
 
+import "./Perfil.css"
+
 function Perfil () {
     return <>
     
-    <h1>Seu Perfil</h1>
-    <p>Configurações</p>
-    <p>Nome</p>
-    <p>Foto</p>
-    <p>informações</p>
-    <p>sair</p>
-    
+    <div className="App">
+        <h1>Seu Perfil</h1>
+        <div className="corpo">
+            <a href=""><p>Configurações</p></a>
+            <a href=""><p>Nome</p></a>
+            <a href=""><p>Foto</p></a>
+            <a href=""><p>informações</p></a>
+            <a href=""><p>sair</p></a>
+        </div>
+    </div>
     </>
 }
 
