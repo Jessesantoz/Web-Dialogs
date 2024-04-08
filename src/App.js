@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, NavLink, Switch, Route } from 'react-router-dom';
 
-import NovoComentario from "./components/NovoComentario/NovoComentario"
-import Dialogo from "./components/Dialogo/Dialogo"
-import Apresentacao from "./components/Apresentacao/Apresentacao"
-import Perfil from "./components/Perfil/Perfil"
+import Apresentacao from "./components/Apresentacao/Apresentacao";
+import NovoComentario from "./components/NovoComentario/NovoComentario";
+import BibliotecaDialogos from "./components/BibliotecaDialogos/BibliotecaDialogos";
+import Perfil from "./components/Perfil/Perfil";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
                 <NavLink to='/' exact>Home</NavLink>
               </li>
               <li>
-                <NavLink to='/Dialogo'>Diálogos</NavLink>
+                <NavLink to='/Dialogos'>Diálogos</NavLink>
               </li>
               <li>
                 <NavLink to='/NovoComentario'>Novo Diálogo</NavLink>
@@ -34,8 +34,8 @@ function App() {
             <Route path="/" exact>
               <Apresentacao/>
             </Route>
-            <Route path="/Dialogo">
-              <Dialogo/>
+            <Route path="/Dialogos">
+              <BibliotecaDialogos/>
             </Route>
             <Route path="/NovoComentario">
               <NovoComentario/>
