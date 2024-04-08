@@ -15,7 +15,7 @@ function App() {
           <nav>
             <ul>
               <li>
-                <NavLink to='/Apresentacao'>Home</NavLink>
+                <NavLink to='/' exact>Home</NavLink>
               </li>
               <li>
                 <NavLink to='/Dialogo'>Diálogos</NavLink>
@@ -31,7 +31,7 @@ function App() {
         </header>
         <main>
           <Switch>
-            <Route path="/Apresentacao">
+            <Route path="/" exact>
               <Apresentacao/>
             </Route>
             <Route path="/Dialogo">
